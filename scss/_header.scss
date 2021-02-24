@@ -126,7 +126,17 @@
     width: 3px;
     height: 5%;
     border-right: 3px solid darken($color: $secondary-clr, $amount: 30);
+    -webkit-animation: blink 0.5s infinite ease;
     animation: blink 0.5s infinite ease;
+  }
+}
+
+@-webkit-keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 

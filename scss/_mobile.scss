@@ -113,6 +113,7 @@
     &-columns {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
+      -moz-column-gap: 0.3rem;
       column-gap: 0.3rem;
     }
   }
