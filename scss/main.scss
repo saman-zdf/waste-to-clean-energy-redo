@@ -1,0 +1,21 @@
+@import 'config';
+@import 'utilities';
+@import 'header';
+@import 'introduction';
+@import 'newcastle';
+@import 'technology';
+@import 'about';
+@import 'footer';
+@import 'mobile';
+
+body {
+  background: white;
+  line-height: 1.4;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 0.02rem;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

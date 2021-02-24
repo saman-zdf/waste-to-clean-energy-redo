@@ -1,0 +1,140 @@
+.header {
+  &-center {
+    z-index: 2;
+    position: fixed;
+    color: $dark-clr;
+    text-align: center;
+    position: relative;
+  }
+  &-logo {
+    width: 200px;
+  }
+  &-toggle {
+    display: none;
+  }
+  &-label {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 2rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    span {
+      width: 29.6px;
+      height: 2px;
+      background: $secondary-clr;
+      z-index: 1;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      &::before,
+      &::after {
+        content: '';
+        width: 30px;
+        height: 2.5px;
+        background: $secondary-clr;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      &::before {
+        top: 7px;
+      }
+      &::after {
+        bottom: 7px;
+      }
+    }
+  }
+}
+.nav {
+  text-align: left;
+  transform: scale(1, 0);
+  transition: $transiton;
+  z-index: 2;
+  &-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    color: #333;
+    width: 100%;
+    background: lighten($color: $secondary-clr, $amount: 20);
+    padding: 2rem 0 0 2rem;
+  }
+
+  &-link {
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    opacity: 0;
+    color: #fff;
+    transition: all 100ms linear;
+    &:hover {
+      color: $secondary-clr;
+      border-color: $secondary-clr;
+    }
+  }
+  &-current {
+    border-bottom: 2px solid darken($color: $secondary-clr, $amount: 40);
+    width: 50px;
+  }
+}
+.header-toggle:checked ~ nav {
+  transform: scale(1, 1);
+}
+.header-toggle:checked ~ nav a {
+  opacity: 1;
+  transition: opacity 250ms linear 250ms;
+}
+.showcase {
+  height: 80vh;
+  background: url('../new-image/bg-4.jpg') center/cover no-repeat;
+  @include grid-center;
+  text-align: center;
+  &-title {
+    max-width: 600px;
+    font-size: 2.2rem;
+    color: darken($color: $secondary-clr, $amount: 30);
+  }
+  &-text {
+    color: darken($color: $secondary-clr, $amount: 30);
+    font-size: 1.6;
+  }
+  &-btn {
+    display: inline-block;
+    padding: 0.6rem 1.5rem;
+    background: $white-clr;
+    color: $secondary-clr;
+    margin-top: 1.5rem;
+    border-radius: 10px;
+    border: 2px solid $secondary-clr;
+
+    transition: $transiton;
+    &:hover {
+      background: $secondary-clr;
+      color: $white-clr;
+    }
+  }
+}
+
+.blink {
+  &::after {
+    content: '';
+    width: 3px;
+    height: 5%;
+    border-right: 3px solid darken($color: $secondary-clr, $amount: 30);
+    animation: blink 0.5s infinite ease;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

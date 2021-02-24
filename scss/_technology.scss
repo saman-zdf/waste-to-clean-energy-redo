@@ -1,0 +1,70 @@
+.technology {
+  padding: 2rem;
+  &-hero {
+    @include flex-column;
+  }
+  &-title {
+    color: darken($color: $secondary-clr, $amount: 15);
+    margin-top: 2rem;
+    text-align: center;
+  }
+
+  &-photo {
+    display: block;
+    width: 90%;
+    margin: 3rem auto 1rem;
+    border-radius: 30px;
+  }
+}
+.tech {
+  &-info {
+    margin: 2rem 0;
+  }
+  &-sup {
+    color: rgb(29, 29, 49);
+    font-size: 1.1rem;
+    margin: 1rem 0;
+    text-transform: uppercase;
+    border-bottom: 3px solid $secondary-clr;
+    max-width: 300px;
+    padding-bottom: 0.5rem;
+  }
+  &-text {
+    color: $secondary-clr;
+    max-width: 800px;
+    span {
+      border-bottom: 3px solid $secondary-clr;
+    }
+  }
+  &-table-content {
+    text-align: center;
+  }
+  &-lists2 {
+    margin: 1.5rem;
+  }
+  &-list2 {
+    margin: 0 1rem;
+    padding: 1rem 0;
+    border-bottom: 2px solid $secondary-clr;
+    max-width: 600px;
+  }
+  &-link {
+    margin-right: 1rem;
+    font-size: 0.8rem;
+    &:hover {
+      color: $light-blue;
+    }
+  }
+}
+.table-a {
+  border: 3px solid $secondary-clr;
+  &-head1 {
+    background: rgb(144, 213, 238);
+    border: 2px solid rgb(21, 5, 49);
+  }
+  &-data1 {
+    background: rgb(206, 206, 248);
+
+    border: 2px solid rgb(21, 5, 49);
+  }
+}

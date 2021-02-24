@@ -1,0 +1,67 @@
+$primary-clr: #258050;
+$secondary-clr: #4267b2;
+$secondary-dark-clr: #1b4d7b;
+$light-blue: rgb(82, 148, 194);
+$light-gray: #eceded;
+$light-green: rgb(157, 253, 152);
+$dark-clr: #333;
+$white-clr: #fff;
+
+$transiton: all 350ms ease-in-out;
+
+// Mixin
+@mixin grid-center {
+  display: grid;
+  place-items: center;
+}
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@mixin flex-s-between {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+@mixin flex-s-evenly {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+// chart
+@mixin bars {
+  width: 10px;
+  height: 243px;
+  background: $primary-clr;
+  margin-bottom: 1rem;
+  margin-right: 0.7rem;
+  align-self: flex-end;
+}
+@mixin bar {
+  width: 10px;
+  height: 160px;
+  background: rgba(141, 228, 186, 0.707);
+  margin-bottom: 1rem;
+}
+
+// function
+@function set-text-color($color) {
+  @if (lightness($color) > 50) {
+    @return #333;
+  } @else {
+    @return #fff;
+  }
+}

@@ -1,0 +1,9 @@
+.footer {
+  background: $dark-clr;
+  color: set-text-color($dark-clr);
+  @include flex-column;
+  padding: 1rem 2rem;
+  &-logo {
+    width: 150px;
+  }
+}

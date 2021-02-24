@@ -1,0 +1,93 @@
+a {
+  text-decoration: none;
+  color: #333;
+}
+ul {
+  list-style-type: none;
+}
+h1 {
+  font-size: 2.5rem;
+}
+h2 {
+  font-size: 2rem;
+}
+@media (min-width: 992px) {
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.section-title {
+  text-transform: capitalize;
+  font-size: 2rem;
+  max-width: 450px;
+  padding: 0 1.5rem;
+  text-align: center;
+  margin: 1rem auto 0;
+}
+.bottom-line {
+  width: 100px;
+  height: 4px;
+  background-color: darken($color: $secondary-clr, $amount: 25);
+  margin: 1rem auto 0.2rem;
+  border-radius: 40px;
+}
+.bottom-line2 {
+  width: 90px;
+  height: 4px;
+  background-color: darken($color: $secondary-clr, $amount: 25);
+  margin: 1rem auto 0.2rem;
+  border-radius: 40px;
+}
+.bottom-line3 {
+  width: 80px;
+  height: 4px;
+  background-color: darken($color: $secondary-clr, $amount: 25);
+  margin: 1rem auto 0.2rem;
+  border-radius: 40px;
+}
+.bottom-line4 {
+  width: 70px;
+  height: 4px;
+  background-color: darken($color: $secondary-clr, $amount: 25);
+  margin: 1rem auto 0.2rem;
+  border-radius: 40px;
+}
+.my-1 {
+  margin: 2rem auto 1rem;
+}
+.text-center {
+  text-align: center;
+}
+.max700 {
+  max-width: 700px;
+}
+.center {
+  border-top: 3px solid $primary-clr;
+  margin-bottom: 1rem;
+}
+.top-button {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 1rem;
+}
+.top-btn {
+  border: 2px solid $secondary-clr;
+  padding: 1rem 1.2rem;
+  display: inline-block;
+  border-radius: 10px;
+  color: $secondary-clr;
+  transition: all 350ms ease-in-out;
+  &:hover {
+    color: #fff;
+    background: $secondary-clr;
+  }
+}
